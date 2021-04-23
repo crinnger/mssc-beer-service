@@ -1,0 +1,15 @@
+management:
+    endpoint:
+        metrics:
+            enabled: true
+    endpoints:
+        web:
+            exposure:
+                include: info,health,prometheus,metrics
+    health:
+        probes:
+            enabled: true
+server:
+    shutdown: graceful
+    servlet:
+        context-path: /app

@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mssc-beer-service
+  namespace: dev-to
+spec:
+  selector:
+    app: mssc-beer-service
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 8080
+      nodePort: 31364
+      targetPort: 8080
+      name: http
